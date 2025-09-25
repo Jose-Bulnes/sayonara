@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Avanzada</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeAPI Logo" class="logo">
+        </div>
+        <h1>Mi Pokédex</h1>
+    </header>
+
+    <main>
+        <div class="controles">
+            <div class="buscador">
+                <input type="text" id="busqueda" placeholder="Buscar Pokémon por nombre...">
+                <button id="boton-buscar">Buscar</button>
+            </div>
+            
+            <div class="filtros">
+                <select id="filtro-tipo">
+                    <option value="">Todos los tipos</option>
+                    <option value="normal">Normal</option>
+                    <option value="fire">Fuego</option>
+                    <option value="water">Agua</option>
+                    <option value="grass">Planta</option>
+                    <option value="electric">Eléctrico</option>
+                    <option value="ice">Hielo</option>
+                    <option value="fighting">Lucha</option>
+                    <option value="poison">Veneno</option>
+                    <option value="ground">Tierra</option>
+                    <option value="flying">Volador</option>
+                    <option value="psychic">Psíquico</option>
+                    <option value="bug">Bicho</option>
+                    <option value="rock">Roca</option>
+                    <option value="ghost">Fantasma</option>
+                    <option value="dark">Siniestro</option>
+                    <option value="dragon">Dragón</option>
+                    <option value="steel">Acero</option>
+                    <option value="fairy">Hada</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cargando" id="cargando">
+            <img src="https://i.gifer.com/origin/28/2860d2d8c3a1e402e0fc8913cd92cd7a_w200.gif" alt="Cargando...">
+            <p>Cargando Pokémon...</p>
+        </div>
+        
+        <div class="lista-pokemon" id="lista-pokemon"></div>
+        
+        <div class="paginacion">
+            <button id="anterior" class="boton-paginacion">← Anterior</button>
+            <div id="numeros-pagina" class="numeros-pagina"></div>
+            <button id="siguiente" class="boton-paginacion">Siguiente →</button>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div id="detalles-pokemon"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Creado por [Tu Nombre] - Usando la API de <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
